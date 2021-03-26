@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <style>
+    .center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #ffffff;
+  padding: 10px;
+  text-align: center;
+  
+} 
+h1 {
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  
+}
+div{
+  border: 2px solid #dedede;
+  background-image: url(https://cutewallpaper.org/21/anime-background-4k/anime-4K-wallpapers-for-your-desktop-or-mobile-screen-free-.jpg);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background-attachment: scroll;
+
+}
+label{
+  color: #dedede;
+}
+
+
+    </style>
+</head>
+<body>
+  
+    <div class="container p-5">
+        <h1 class="text-center mb-5 text-uppercase text-muted">Real Time Chat</h1>    
+            <div class="text-uppercase center">
+              <form action="" method="POST">
+                <div class="form-group">
+                  <label for="_email">Your Name</label>
+                  <input type="text" name="user_name" id="_rname" class="form-control" placeholder="Name" rnodeequired>
+                </div>
+                <div class="form-group">
+                  <label for="_email">Email</label>
+                  <input type="text" name="user_email" id="_email" class="form-control" placeholder="Email" rnodeequired>
+                </div>
+                <% if (locals.login_errors) { 
+                  login_errors.forEach(function(error_msg){ %>
+                  <div class= "alert alert-danger" role="alert"><%= error_msg %></div>
+                <% });
+                } %>
+                <button type="submit" class="btn btn-primary">Enter Chat</button>
+            </form>      
+        </div>
+    </div>
+</body>
+</html>
